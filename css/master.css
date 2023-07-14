@@ -1,0 +1,253 @@
+/* Golbal Rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #009688;
+    --title-color: #607D8B;
+    --quest-color: #E91F64;
+    --level-color: #F4433C;
+    --pirate-rank: #2196F3;
+}
+
+body{
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Start Profile */
+/* Left Side */
+
+.parent{
+    padding: 20px;
+    background-color: #EEE;
+}
+
+.parent .profile{
+    display: flex;
+}
+
+.parent .profile .left-side{
+    margin-right: 2px;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.parent .profile .left-side .info{
+    padding: 15px 15px 0;
+}
+
+.parent .profile .left-side .image{
+    text-align: center;
+}
+
+.parent .profile .left-side .info h3{
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+.parent .profile .left-side .info div{
+    width:200px;
+    height: 20px;
+    display: flex;
+    background-color: #EEE;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.parent .profile .left-side .info div span{
+    width: 75%;
+    background-color: var(--main-color);
+    border-radius: 5px 0 0 5px;
+}
+
+.parent .profile .left-side .info p{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.parent .profile .left-side .info p span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/* Right Side */
+
+.parent .profile .right-side{
+    background-color: white;
+    padding: 0 20px;
+    position: relative;
+}
+
+.parent .profile .right-side .info p{
+    line-height: 2;
+}
+
+.parent .profile .right-side .info p:last-child{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+hr{
+    opacity: .1;
+    margin: 20px 0;
+}
+
+/* End Profile */
+/* Start Quests */
+
+.parent .points {
+    background-color: white;
+    padding: 20px;
+}
+
+.parent .title p{
+    background-color: var(--title-color);
+    color: white;
+    width: fit-content;
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.parent .points .quest{
+    padding-top: 5px;
+    border-bottom:1px solid #EEE;
+}
+
+.parent .points .quest p span:first-child{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.parent .points .quest p span:nth-child(2){
+    color: var(--quest-color);
+    font-weight: bold;
+}
+
+.parent .points .quest:last-child{
+    border-bottom: none;
+}
+
+/* End Quests */
+/* Start Trophies */
+
+.parent .trophies{
+    background-color: white;
+    padding: 20px;
+}
+
+.parent .trophies .title{
+    margin-bottom: 10px;
+}
+
+.parent .trophies .images img:nth-child(6) ,
+.parent .trophies .images img:nth-child(10) ,
+.parent .trophies .images img:nth-child(13) ,
+.parent .trophies .images img:nth-child(15) ,
+.parent .trophies .images img:nth-child(17) ,
+.parent .trophies .images img:nth-child(20){
+    opacity: .1;
+}
+
+/* End Trophies */
+/* Start Rank */
+
+.parent .rank{
+    background-color: white;
+    padding: 20px;
+}
+
+.parent .rank p span:first-child{
+    color:var(--level-color);
+    font-weight: bold;
+}
+
+.parent .rank p span:last-child{
+    color: var(--pirate-rank);
+    font-weight: bold;
+}
+
+/* End Rank */
+/* Start Powers */
+
+.parent .your-powers{
+    background-color: white;
+    padding: 20px;
+}
+
+.parent .your-powers .skill {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 10px;
+}
+
+.parent .your-powers .skill:last-child{
+    border: none;
+}
+
+.parent .your-powers .skill .yes {
+    color: green;
+    font-weight: bold;
+}
+
+.parent .your-powers .skill .no {
+    color: red;
+    font-weight: bold;
+}
+
+/* End Powers */
+/* media */
+
+@media (max-width:700px) {
+    .parent .profile{
+        flex-direction: column;
+    }
+    .parent .profile .left-side .info div{
+        margin: auto;
+    }
+    .parent .profile .right-side .info h1{
+        text-align: center;
+    }
+    .parent .profile .right-side .info p:last-child{
+        position: relative;
+        text-align: right;
+    }
+}
+
+@media (max-width:425px){
+    .parent{
+        padding: 15px;
+    }
+    .parent .profile .left-side{
+        border-bottom: 1px solid #EEE;
+    }
+    .parent .rank p:last-child{
+        line-height: 1.6;
+    }
+    .parent .title p{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:375px){
+    .parent .your-powers .skill:nth-child(3) p:first-child {
+        font-size: 14px;
+    }
+    .parent .points .quest p{
+        line-height: 1.6;
+    }
+}
+
+@media (max-width:320px){
+    .parent .your-powers .skill:nth-child(4) p:first-child{
+        font-size: 14px;
+    }
+}
